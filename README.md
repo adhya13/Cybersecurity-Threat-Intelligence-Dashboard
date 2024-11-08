@@ -1,4 +1,6 @@
-## **Cybersecurity Threat Intelligence Dashboard: Commanding the Realm of Cyber Threats**
+![image](https://github.com/user-attachments/assets/f94b66ba-56e0-486e-9ece-aeeec73abde8)
+
+## **Cybersecurity Threat Intelligence Dashboard**
 
 ### **Introduction: Enter the Cyber Nexus**
 
@@ -22,16 +24,12 @@ The **Cybersecurity Threat Intelligence Dashboard** was built to meet the demand
 
 With 108 feeds, this dashboard goes beyond what most dashboards offer, pulling in the latest intelligence across a vast array of topics in cybersecurity. Whether you’re tracking vulnerabilities, monitoring exploits, or simply staying updated on the latest in threat intelligence, this dashboard is designed to keep you informed.
 
----
-
 ### **Use Cases: Who Commands the Dashboard?**
 
 * **Security Operations Centers (SOCs)**: For SOCs, real-time intelligence is oxygen. This dashboard provides a comprehensive view of the threat landscape, with up-to-the-minute alerts across 108 feeds. It’s the intelligence backbone for proactive defense.  
 * **Threat Hunters**: The thrill of the hunt requires constant, fresh data. With this dashboard, threat hunters have a continuous stream of vulnerabilities, exploits, and attack vectors to fuel their analysis.  
 * **Researchers and Analysts**: In-depth cybersecurity research demands exhaustive data sources. This dashboard delivers unparalleled scope, enabling researchers to stay updated on the latest threats and trends.  
 * **Cyber Enthusiasts and Professionals**: Even if you’re a solo practitioner, this dashboard grants you a command-center view of the cyber world, empowering you to track the latest threats with professional-grade data streams.
-
----
 
 ## **Project Structure**
 
@@ -45,7 +43,7 @@ The dashboard is built using only **HTML**, **CSS**, and **JavaScript**. It does
 
 1. **Feed Aggregation with JavaScript**: The dashboard aggregates 108 RSS feeds using a JavaScript function that fetches data via an RSS-to-JSON proxy. This setup allows for seamless integration of diverse feeds from reputable sources.
 
-| const rssFeeds \= \[     "https://www.us-cert.gov/ncas/alerts.xml",     "https://www.bleepingcomputer.com/feed/",     "https://threatpost.com/feed/",     // ... additional feeds \]; const proxyUrl \= "https://api.rss2json.com/v1/api.json?rss\_url="; async function fetchFeeds() {     for (let feedUrl of rssFeeds) {         try {             const response \= await fetch(proxyUrl \+ encodeURIComponent(feedUrl));             const data \= await response.json();             // Process and display data         } catch (error) {             console.error('Error fetching feed:', error);         }     } }  |
+| const rssFeeds \= \[     "https://www.us-cert.gov/ncas/alerts.xml",     "https://www.bleepingcomputer.com/feed/",     "https://threatpost.com/feed/",     // ... additional feeds \]; const proxyUrl \= "https://api.rss2json.com/v1/api.json?rss\_url="; async function fetchFeeds() {     for (let feedUrl of rssFeeds) {         try {             const response \= await fetch(proxyUrl \+ encodeURIComponent(feedUrl));             const data \= await response.json();             // Process and display data         } catch (error) {             console.error('Error fetching feed:', error);         }     } } |
 | :---- |
 
 2. **Automatic Refresh Mechanism**: The JavaScript function is set to refresh every 10 minutes, ensuring that the dashboard remains in sync with real-time developments. This is achieved with `setInterval`, allowing the user to leave the dashboard open while receiving continuous updates.  
@@ -75,8 +73,6 @@ While this project provides a robust real-time monitoring solution, here are som
 2. **Customizable Feed Preferences**: Allowing users to select or prioritize certain feeds would make the dashboard more personalized.  
 3. **Alerts and Notifications**: Adding a system for custom alerts or notifications when certain keywords appear could provide added value for security operations.  
 4. **Data Visualization**: Integrate basic charts and visualizations to summarize the types of threats and vulnerabilities over time.
-
----
 
 ### **Final Words: Own the Flow of Information**
 
