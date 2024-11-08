@@ -42,10 +42,6 @@ The dashboard is built using only **HTML**, **CSS**, and **JavaScript**. It does
 ### **Key Components**
 
 1. **Feed Aggregation with JavaScript**: The dashboard aggregates 108 RSS feeds using a JavaScript function that fetches data via an RSS-to-JSON proxy. This setup allows for seamless integration of diverse feeds from reputable sources.
-
-| const rssFeeds \= \[     "https://www.us-cert.gov/ncas/alerts.xml",     "https://www.bleepingcomputer.com/feed/",     "https://threatpost.com/feed/",     // ... additional feeds \]; const proxyUrl \= "https://api.rss2json.com/v1/api.json?rss\_url="; async function fetchFeeds() {     for (let feedUrl of rssFeeds) {         try {             const response \= await fetch(proxyUrl \+ encodeURIComponent(feedUrl));             const data \= await response.json();             // Process and display data         } catch (error) {             console.error('Error fetching feed:', error);         }     } } |
-| :---- |
-
 2. **Automatic Refresh Mechanism**: The JavaScript function is set to refresh every 10 minutes, ensuring that the dashboard remains in sync with real-time developments. This is achieved with `setInterval`, allowing the user to leave the dashboard open while receiving continuous updates.  
 3. **User Interface Design**: The dark theme is complemented by neon green, red, and blue accents, offering a high-contrast, immersive interface. Large emojis and color-coded elements make the dashboard both engaging and easy to navigate.
 
